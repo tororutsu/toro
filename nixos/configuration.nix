@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running `nixos-help`).
 
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   imports =
@@ -50,6 +50,12 @@
 
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = ["nvidia"];
+  # Enable the X11 windowing system.
+  services.xserver.enable = true;
+  #services.xserver.autorun = false;
+  services.xserver.displayManager.setupCommands = "
+    ${pkgs.xorg.xrandr}/bin/xrandr --output HDMI-1-0 --mode 1920x1080 --rate 144 --left-of eDP
+  ";
   services.xserver.windowManager.herbstluftwm.enable = true;
 
   hardware.nvidia = {
@@ -86,12 +92,10 @@
       enableOffloadCmd = true;
     };
     # Make sure to use the correct Bus ID values for your system!
-    amdgpuBusId = "PCI:6:0:0";
+    amdgpuBusId = lib.mkDefault "PCI:6:0:0";
     nvidiaBusId = "PCI:1:0:0";
 };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
 
   # Configure keymap in X11
   # services.xserver.layout = "us";

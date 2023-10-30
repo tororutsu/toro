@@ -3,6 +3,8 @@
 {
   imports = [
     ./herbst
+    ./qutebrowser
+    #./autorandr
   ];
 
   home.username = "rj";
@@ -15,7 +17,6 @@
   home.packages = [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
-    pkgs.qutebrowser
     pkgs.kitty
     pkgs.keepassxc
     pkgs.dmenu-rs

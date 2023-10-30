@@ -2,8 +2,11 @@
 let
   # A list is used because it preserves ordering
   tags = [
-    { name = "tag 1"; key = "term"; }
-    { name = "tag 2"; key = "browser";}
+    { name = "term"; key = "1"; }
+    { name = "browser"; key = "2";}
+    { name = "code"; key = "3";}
+    { name = "prod"; key = "4";}
+    { name = "discord"; key = "5";}
     #...
   ];
   # Attribute set of { <keybind> = "use <tag>"; }
@@ -15,15 +18,31 @@ in
   xsession = {enable = true;
     windowManager.herbstluftwm = {enable = true;
       tags = lib.catAttrs "name" tags;
+      extraConfig = ''
+        herbstclient detect_monitors
+      '';
       keybinds = {
         #{keybinds}:
 	#Control
         Mod4-Shift-q = "quit";
         Mod4-Shift-r = "reload";
 	Mod4-Shift-c = "close";
+	Mod4-BackSpace = "cycle_monitor";
 	#Spawn
         Mod4-Return = "spawn kitty"; 
 	Mod4-w = "spawn qutebrowser";
+	Mod4-d = "spawn dmenu_run";
+	# Tags
+	Mod4-1 = "use term";
+	Mod4-2 = "use browser";
+	Mod4-3 = "use code";
+	Mod4-4 = "use prod";
+	Mod4-5 = "use discord";
+	Mod4-Shift-1 = "move term";
+	Mod4-Shift-2 = "move browser";
+	Mod4-Shift-3 = "move code";
+	Mod4-Shift-4 = "move prod";
+	Mod4-Shift-5 = "move discord";
 	#Movement
 	Mod4-c = "cycle";
 	Mod4-Tab = "cycle_all +1";
