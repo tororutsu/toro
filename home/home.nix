@@ -62,7 +62,8 @@
     };
     shellAliases = {
       ".." = "cd ../";
-      "vim" = "nvim";
+      "vim" = "nix run github:tororutsu/nvim-flake";
+      "nvim" = "nix run github:tororutsu/nvim-flake";
       "hmup" = "home-manager switch --flake .#rj@toro";
       "nixup" = "sudo nixos-rebuild switch --flake .#toro";
     };
