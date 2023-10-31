@@ -102,8 +102,8 @@
   services.xserver.xkbOptions = "caps:swapescape";
 
   # Enable sound.
-  # sound.enable = true;
-  # hardware.pulseaudio.enable = true;
+  sound.enable = true;
+  hardware.pulseaudio.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
@@ -116,7 +116,6 @@
     packages = with pkgs; [
       firefox
       git
-      neovim
       zellij
       home-manager
     ];

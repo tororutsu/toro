@@ -8,12 +8,14 @@
       url = "github:nix-community/home-manager/release-23.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nvim-flake.url = "github:tororutsu/nvim-flake";
   };
 
   outputs = {
     self,
     nixpkgs,
     home-manager,
+    nvim-flake,
     ...
   } @ inputs: let
     inherit (self) outputs;

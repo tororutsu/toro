@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ inputs, outputs, lib, config, pkgs, ... }:
 
 {
   imports = [
@@ -23,6 +23,7 @@
     pkgs.clipboard-jh
     pkgs.eww
 
+    inputs.nvim-flake.packages.x86_64-linux.default
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
@@ -63,6 +64,7 @@
     shellAliases = {
       ".." = "cd ../";
       "vim" = "nvim";
+      #"nvim" = "nix run 'github:tororutsu/nvim-flake'";
       "hmup" = "home-manager switch --flake .#rj@toro";
       "nixup" = "sudo nixos-rebuild switch --flake .#toro";
     };
