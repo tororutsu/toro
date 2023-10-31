@@ -4,7 +4,6 @@
   imports = [
     ./herbst
     ./qutebrowser
-    #./autorandr
   ];
 
   home.username = "rj";
@@ -64,7 +63,6 @@
     shellAliases = {
       ".." = "cd ../";
       "vim" = "nvim";
-      #"nvim" = "nix run 'github:tororutsu/nvim-flake'";
       "hmup" = "home-manager switch --flake .#rj@toro";
       "nixup" = "sudo nixos-rebuild switch --flake .#toro";
     };
