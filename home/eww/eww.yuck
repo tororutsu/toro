@@ -2,8 +2,8 @@
            :monitor 0
            :geometry (geometry :x "0%"
                                :y "10px"
-                               :width "90%"
-                               :height "30px"
+                               :width "50%"
+                               :height "10px"
                                :anchor "top center")
            :stacking "fg"
            :reserve (struts :distance "40px" :side "top")
