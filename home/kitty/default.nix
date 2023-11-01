@@ -1,7 +1,7 @@
 {config, ...}:
 {
   programs.kitty = {enable = true;
-    shellIntergration.enableBashIntegration = true;
+    shellIntegration.enableBashIntegration = true;
     theme = "Catppuccin-Mocha";
   };
 }
