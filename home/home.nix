@@ -21,7 +21,6 @@
     pkgs.keepassxc
     pkgs.dmenu-rs
     pkgs.clipboard-jh
-    pkgs.eww
 
     inputs.nvim-flake.packages.x86_64-linux.default
     # # It is sometimes useful to fine-tune packages, for example, by applying
@@ -71,6 +70,10 @@
   };
   # Bash prompt
   programs.starship.enable = true;
+  # EWW
+  programs.eww = {enable = true;
+    configDir = [./eww];
+  };
   # Git
   programs.git = {enable = true;
     userName = "tororutsu";
