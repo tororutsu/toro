@@ -75,5 +75,10 @@
   programs.git = {enable = true;
     userName = "tororutsu";
     userEmail = "rjahrj@gmail.com";
+    aliases = {
+      co = "checkout";
+      st = "status -sb";
+      cm = "commit -m";
+    };
   };
 }
