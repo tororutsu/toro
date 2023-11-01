@@ -5,6 +5,7 @@
     theme = "Catppuccin-Mocha";
     font = {
       name = "Hack Nerd";  
+      size = "20";
     };
   };
 }
