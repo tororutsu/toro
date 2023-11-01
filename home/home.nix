@@ -4,6 +4,7 @@
   imports = [
     ./herbst
     ./qutebrowser
+    ./kitty
   ];
 
   home.username = "rj";
