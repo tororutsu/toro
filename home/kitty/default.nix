@@ -4,7 +4,7 @@
     shellIntegration.enableBashIntegration = true;
     theme = "Catppuccin-Mocha";
     font = {
-      name = "Monoid";  
+      name = "Hack Nerd";  
     };
   };
 }
