@@ -100,7 +100,7 @@
 
   # Configure keymap in X11
   # services.xserver.layout = "us";
-  services.xserver.xkbOptions = "caps:swapescape";
+  #services.xserver.xkbOptions = "caps:swapescape";
 
   # Enable sound.
   sound.enable = true;
