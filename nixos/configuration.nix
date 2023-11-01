@@ -53,9 +53,9 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
   #services.xserver.autorun = false;
-  services.xserver.displayManager.setupCommands = "
-    ${pkgs.xorg.xrandr}/bin/xrandr --output HDMI-1-0 --mode 1920x1080 --rate 144 --left-of eDP
-  ";
+  #services.xserver.displayManager.setupCommands = "
+  #  ${pkgs.xorg.xrandr}/bin/xrandr --output HDMI-1-0 --mode 1920x1080 --rate 144 --left-of eDP
+  #";
   services.xserver.windowManager.herbstluftwm.enable = true;
 
   hardware.nvidia = {
