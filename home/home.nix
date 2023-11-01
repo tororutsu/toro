@@ -72,7 +72,7 @@
   programs.starship.enable = true;
   # EWW
   programs.eww = {enable = true;
-    configDir = [./eww];
+    configDir = ./eww;
   };
   # Git
   programs.git = {enable = true;
