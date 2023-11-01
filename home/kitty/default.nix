@@ -7,5 +7,10 @@
       name = "Hack Nerd";  
       size = 10;
     };
+    settings = {
+     #Windows
+     draw_minimal_borders = true;
+
+    };
   };
 }
