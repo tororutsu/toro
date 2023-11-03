@@ -1,20 +1,17 @@
-(defwindow example
-           :monitor 0
-           :geometry (geometry :x "0%"
-                               :y "10px"
-                               :width "100%"
-                               :height "10px"
-                               :anchor "top center")
-           :stacking "fg"
-           :reserve (struts :distance "40px" :side "top")
-           :windowtype "dock"
-           :wm-ignore false
-  (greeter :text "Say hello!"
-           :name "Rj"))
+(defwindow top
+  :monitor 0
+  :stacking "fg"
+  :reserve (struts :distance "35px" :side "top")
+  :windowtype "dock"
+  :wm-ignore false
+  :geometry (geometry
+              :width "100%"
+              :anchor "top center")
+  (top))
 
-(defwidget greeter [?text name]
-  (box :orientation "horizontal"
-       :halign "center"
-    text
-    (button :onclick "notify-send 'Hello' 'Hello, ${name}'"
-      "Greet")))
+(defpoll time :interval "1m"
+       "date +\"%I\":\"%M\"")
+
+(defwidget top []
+  (label :text time
+    :halign "end"))
