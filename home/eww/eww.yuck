@@ -1,7 +1,7 @@
 (defwindow top
   :monitor 0
   :stacking "fg"
-  :reserve (struts :distance "35px" :side "top")
+  :reserve (struts :distance "20px" :side "top")
   :windowtype "dock"
   :wm-ignore false
   :geometry (geometry
